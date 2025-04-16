@@ -1,54 +1,77 @@
-# React + TypeScript + Vite
+# LMS Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the frontend application for the Learning Management System (LMS). It provides a user-friendly interface for students, instructors, and administrators to interact with the LMS platform.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Login and registration functionality.
+- **Course Management**: Browse, enroll, and manage courses.
+- **Dashboard**: Personalized dashboard for users.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: React.js
+- **State Management**: Redux
+- **Styling**: Tailwind CSS
+- **API Communication**: Axios
+- **Build Tool**: Vite
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/lms-frontend.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd lms-frontend
+   ```
+3. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+4. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+## Folder Structure
+
+```
+lms-frontend/
+├── src/
+│   ├── components/    # Reusable components
+│   ├── pages/         # Page components
+│   ├── redux/         # State management
+│   ├── utils/         # Utility functions
+│   └── assets/        # Static assets
+├── public/            # Public files
+├── package.json       # Project metadata
+└── README.md          # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contributing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For any inquiries, please contact [linnmyatmaung03@gmail.com].
